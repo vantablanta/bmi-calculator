@@ -24,50 +24,31 @@ function bmiCalculator(weight, height){
     // get rid of non conforming values
     if (isNaN(height) && isNaN(weight)){
         bmiResult.textContent = 'You provided wrong weight or height values'
-        bmiResult.style.backgroundColor = 'red'
-        bmiResult.style.fontSize= '30px'
-        bmiResult.style.textAlign = 'center'
-        bmiResult.style.width = '550px'
+        //add this css if conditions are met
+        bmiResult.classList.add("is-not-number")
         //when values are numbers 
     }else{
-        let result = (weight / heightInMeters).toFixed(1)  
+        let result = (weight / heightInMeters).toFixed(1)    
+        // Underweight (Below 18.5) · Normal (18.5 - 24.9) · Overweight (25.0 - 29.9)  
         bmiResult.textContent = ` Result: ${result}`
         let verifyBmi = document.getElementById('bmi-verify')
         if (result > 1 && result < 18.5){
             verifyBmi.textContent = "Underweight"
-            verifyBmi.style.backgroundColor = "red"
-            verifyBmi.style.fontSize = "30px"
-            verifyBmi.style.textAlign = "center"
-            verifyBmi.style.height = '50px'
-            verifyBmi.style.marginTop = "30px"
+            //css for underweight. add if conditions are met 
+            verifyBmi.classList.add("underweight")
         }else if (result > 25.0 && result < 29.9){
             verifyBmi.textContent = "Overweight"
-            verifyBmi.style.backgroundColor = "yellow"
-            verifyBmi.style.fontSize = "30px"
-            verifyBmi.style.textAlign = "center"
-            verifyBmi.style.height = '50px'
-            verifyBmi.style.marginTop = "30px"
+            //css for overweight. add if conditions are met
+            verifyBmi.classList.add("overweight")
         }else if (result > 18.5 && result < 25.0){
             verifyBmi.textContent = "Healthy"
-            verifyBmi.style.backgroundColor = "green"
-            verifyBmi.style.fontSize = "30px"
-            verifyBmi.style.textAlign = "center"
-            verifyBmi.style.height = '50px'
-            verifyBmi.style.marginTop = "30px"
+            //css for healthy add if conditions are met 
+            verifyBmi.classList.add("healthy")
         } else {
             verifyBmi.textContent = "Provide correct values."
-            verifyBmi.style.backgroundColor = "blue"
-            verifyBmi.style.fontSize = "30px"
-            verifyBmi.style.textAlign = "center"
-            verifyBmi.style.height = '50px'
-            verifyBmi.style.marginTop = "30px"
+            //css for abnormal numbers provided
+            verifyBmi.classList.add("incorrect-numbers")
         }
-
-
-        // Underweight (Below 18.5) · Normal (18.5 - 24.9) · Overweight (25.0 - 29.9) 
     }
-
-
-
 };
 bmiCalculator(weight, height)

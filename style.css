@@ -1,3 +1,4 @@
+/* CSS for the html */
 *{
     box-sizing: border-box;
 }
@@ -26,3 +27,43 @@ hr{
     display: flex;
     justify-content: space-between;
 }
+
+
+/*css classes for js code*/
+.is-not-number{
+    background-color: red;
+    font-size: 30px;
+    text-align: center;
+    width: 550px;
+
+}
+.underweight{
+    background-color: red;
+    font-size: 30px;
+    text-align: center;
+    height: 50px;
+    margin-top: 30px;
+}
+.overweight{
+    background-color: yellow;
+    font-size: 30px;
+    text-align: center;
+    height: 50px;
+    margin-top: 30px;
+}
+.healthy{
+    background-color: green;
+    font-size: 30px;
+    text-align: center;
+    height: 50px;
+    margin-top: 30px;
+}
+.incorrect-numbers{
+    background-color: blue;
+    font-size: 30px;
+    text-align: center;
+    height: 50px;
+    margin-top: 30px;
+}
+
+
