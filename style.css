@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 50px 100px 50px 100px;
+}
+#footer{
+    margin-bottom: 0;   
+}
+h3{
+    color: rgb(247, 87, 12);
+    font-weight: lighter;
+    font-size: 50px;
+}
+p{
+    font-size: 50px;
+}
+h4{
+    text-align: center;
+}
+hr{
+    border-color: rgb(247, 87, 12);
+}
